@@ -1,0 +1,694 @@
+:root {
+  --gold: #d4b55c;
+  --gold-dark: #c39f47;
+  --bg: #e8e8e8;
+  --text: #111;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--gold);
+  padding: 12px 28px;
+  border-bottom: 4px solid var(--gold-dark);
+}
+
+.logo { 
+  font-weight: 700; 
+  color: #2f2f2f; 
+}
+
+.nav-links { 
+  list-style: none; 
+  display: flex; 
+  gap: 22px; 
+  margin: 0; 
+  padding: 0; 
+}
+
+/* Botones del menú */
+.nav-links a { 
+  display: inline-block;
+  padding: 8px 14px;
+  background: #f5c764;   /* dorado claro */
+  color: #000000;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  background: #bd9e48;  
+  transform: translateY(-2px);
+}
+
+/* Contacto como botón */
+.contacto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: #f5c764;   /* rojo */
+  color: #000000;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contacto:hover {
+  background: #bd9e48;
+  transform: translateY(-2px);
+}
+
+.contacto .phone {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+
+
+/* HERO */
+.hero {
+  position: relative;
+  background: #e5c889;
+  padding: 28px 40px 60px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-left { padding-left: 8px; }
+.hero-title {
+  margin: 0;
+  font-size: clamp(36px, 8vw, 96px);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #111;
+}
+.hero-title span { display: block; margin-top: 6px; }
+.hero-sub {
+  margin: 18px 0 0;
+  font-family: "Segoe Script", cursive;
+  font-size: 17px;
+  color: #222;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-frame {
+  border: 5px solid #000;
+  padding: 5px;
+  background: #f8f8f8;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.hero-photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Sección Colombia */
+.colombia {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.colombia-link {
+  text-decoration: none;
+  color: #b99f0a;
+  transition: color 0.3s ease;
+}
+
+.colombia-link span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.colombia-link:hover span {
+  transform: translateY(-5px);
+}
+
+.colombia-link:hover {
+  color: #806d05;
+}
+
+
+.colombia-texto h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.colombia-texto h3 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.colombia-texto p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 8px;
+
+  
+}
+
+.habitantes {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.habitantes-link {
+  text-decoration: none;
+  color: #b99f0a;
+  transition: color 0.3s ease;
+}
+
+.habitantes-link span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.habitantes-link:hover span {
+  transform: translateY(-5px);
+}
+
+.habitantes-link:hover {
+  color: #806d05;
+}
+
+
+.habitantes-texto h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.habitantes-texto h3 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.habitantes-texto p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.habitantes-img img {
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.geografia {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.geografia-texto h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.geografia h3 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.geografia-texto p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.bandera-img img {
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+/* decoraciones */
+.decor {
+  position: absolute;
+  width: 250px;
+  top: 0;
+  pointer-events: none;
+  user-select: none;
+}
+.decor-left { left: 0; transform: rotate(-10deg); }
+.decor-right { right: 0; transform: scaleX(-1) rotate(8deg); }
+
+/* RESPONSIVE */
+@media (max-width: 880px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-left {
+    order: 2;
+    padding: 22px 16px 0;
+  }
+  .hero-right { order: 1; }
+  .hero-title { font-size: clamp(30px, 8vw, 56px); }
+  .decor { width: 110px; opacity: .9; }
+  .decor-left { left: -20px; top: 8px; }
+  .decor-right { right: -20px; top: 8px; }
+}
+
+/* FOOTER */
+footer {
+  padding: 18px 40px;
+  background: #ddd;
+  color: #222;
+  text-align: center;
+  font-size: 14px;
+}
+
+
+/* Sección Bogotá */
+.bogota {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.bogota-texto h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.bogota-texto h3 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.bogota-texto p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.bogota-img img {
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+.bogota-ciudad{
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.fundacion {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.fundacion-texto h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.fundacion-texto h3 {
+  margin: 8px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.fundacion-texto ul {
+  padding-left: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.fundacion-texto li {
+  margin-bottom: 6px;
+}
+
+.fundacion-img img {
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+
+.mercancia {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.mercancia-texto h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.mercancia-texto h3 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.mercancia-texto p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.producto {
+  background: #f9f9f9;
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.producto h4 {
+  margin: 10px 0 6px;
+  font-size: 18px;
+  color: #222;
+}
+
+.producto p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #444;
+}
+
+
+.medellin {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.medellin-texto {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.medellin-h1 {
+  color: #005f73;
+}
+
+.medellin-texto p {
+  margin-bottom: 14px;
+}
+
+.medellin-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.medellin-img img {
+  max-width: 100%;
+  border: 6px solid #e6e6e6;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.medellin-ciudad {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.-texto h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+
+@media (max-width: 880px) {
+  .medellin {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .medellin-img {
+    margin-top: 20px;
+  }
+}
+
+
+.santa-marta {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.santa-ciudad {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.santamarta-texto h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #005f73; 
+}
+
+.santamarta-texto h3 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #00796b;
+}
+
+.santamarta-texto p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.santamarta-img img {
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.bucaramanga {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+.bucaramanga-texto h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #a1981a;
+}
+
+.bucaramanga-texto h3 {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #276817;
+}
+
+.bucaramanga-texto p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.bucaramanga-img img {
+  max-width: 100%;
+  border-radius: 6px;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.ciudades {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ciudades li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.ciudades span {
+  flex: 1; 
+  margin-right: 15px;
+}
+
+
+.ciudades h4 {
+  display: block;
+  margin: 5px 0;
+}
+
+
+.bucaramanga-ciudad {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
