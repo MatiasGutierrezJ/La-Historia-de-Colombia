@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de pedido</title>
+</head>
+<body>
 
+    <h1>Formulario de compra</h1>
+
+    <form action="#" method="post">
+        <label>Nombre:</label>
+        <input type="text" required><br><br>
+
+        <label>Correo:</label>
+        <input type="email" required><br><br>
+
+        <label>Artículo que deseas:</label>
+        <input type="text" id="producto" readonly><br><br>
+
+        <label>Comentario:</label>
+        <textarea></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        // Detecta el producto que se envió por URL
+        const params = new URLSearchParams(window.location.search);
+        const producto = params.get("item");
+
+        if(producto){
+            document.getElementById("producto").value = producto;
+        }
+    </script>
+
+</body>
+</html>
