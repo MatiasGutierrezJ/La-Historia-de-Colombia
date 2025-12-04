@@ -857,4 +857,22 @@ footer {
   border-radius: 8px;
 }
 
+/* Quitar el color morado de los enlaces visitados */
+a:visited {
+    color: #000; /* o el color que tú uses normalmente */
+}
+
+/* Quitar subrayado en productos */
+.producto a,
+.productoF a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Quitar el color morado en productos también */
+.producto a:visited,
+.productoF a:visited {
+    color: inherit;
+}
+
 
