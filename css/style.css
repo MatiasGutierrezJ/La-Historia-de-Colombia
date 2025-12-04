@@ -145,6 +145,13 @@ html {
   scroll-behavior: smooth;
 }
 
+img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
 /* Sección Colombia */
 .colombia {
@@ -845,3 +852,4 @@ footer {
   object-fit: cover;
   border-radius: 8px;
 }
+
