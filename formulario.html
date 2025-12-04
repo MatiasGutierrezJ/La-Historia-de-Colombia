@@ -1,39 +1,144 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de pedido</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Pedido</title>
+
+  <style>
+    /* ======= NAV ======= */
+    header {
+      background: #222;
+      padding: 20px 0;
+      width: 100%;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f4d03f;
+    }
+
+    /* ======= FORM CONTAINER ======= */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 15px 0 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 15px;
+      background: #222;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #3b3b3b;
+    }
+  </style>
 </head>
+
 <body>
 
-    <h1>Formulario de compra</h1>
+  <!-- ===== NAV COPIADO DE LA PÁGINA PRINCIPAL ===== -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">La historia</a></li>
+        <li><a href="index.html#habitantes">Habitantes</a></li>
+        <li><a href="index.html#geografia">Geografía</a></li>
+        <li><a href="index.html#idioma">Idioma</a></li>
+        <li><a href="index.html#vestido">Vestido</a></li>
+        <li><a href="index.html#otros">Otros</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== FORMULARIO ===== -->
+  <div class="form-container">
+    <h2>Formulario de Pedido</h2>
 
     <form action="#" method="post">
-        <label>Nombre:</label>
-        <input type="text" required><br><br>
 
-        <label>Correo:</label>
-        <input type="email" required><br><br>
+      <label>Nombre:</label>
+      <input type="text" placeholder="Tu nombre" required>
 
-        <label>Artículo que deseas:</label>
-        <input type="text" id="producto" readonly><br><br>
+      <label>Correo:</label>
+      <input type="email" placeholder="correo@ejemplo.com" required>
 
-        <label>Comentario:</label>
-        <textarea></textarea><br><br>
+      <label>Artículo que deseas:</label>
+      <input type="text" id="producto" readonly>
 
-        <button type="submit">Enviar</button>
+      <label>Comentarios adicionales:</label>
+      <textarea placeholder="Escribe algún detalle opcional..."></textarea>
+
+      <button type="submit">Enviar Pedido</button>
     </form>
+  </div>
 
-    <script>
-        // Detecta el producto que se envió por URL
-        const params = new URLSearchParams(window.location.search);
-        const producto = params.get("item");
+  <script>
 
-        if(producto){
-            document.getElementById("producto").value = producto;
-        }
-    </script>
+    const params = new URLSearchParams(window.location.search);
+    const producto = params.get("item");
+
+    if(producto){
+      document.getElementById("producto").value = producto;
+    }
+  </script>
 
 </body>
 </html>
