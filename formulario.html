@@ -7,33 +7,37 @@
 
   <style>
     /* ======= NAV ======= */
-    header {
-      background: #d4b55c;
-      padding: 20px 0;
-      width: 100%;
-    }
+header {
+    background-color: #222;
+    padding: 15px 0;
+}
 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0;
+    margin: 0;
+}
 
-    
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s;
+}
 
-    nav ul li a {
-      color: black;
-      font-size: 18px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
+/* Hover bonito */
+nav ul li a:hover {
+    color: #d4d4d4;
+}
 
-    nav ul li a:hover {
-      color: #c39f47;
-    }
+/* QUITA EL MORADO DE LOS LINKS VISITADOS */
+nav ul li a:visited {
+    color: #fff;
+}
 
     /* ======= FORM CONTAINER ======= */
     body {
@@ -96,18 +100,18 @@
 
 <body>
 
-  <!-- ===== NAV COPIADO DE LA PÁGINA PRINCIPAL ===== -->
-  <header>
+<header>
     <nav>
       <ul>
         <li><a href="index.html">Casa</a></li>
         <li><a href="index.html#habitantes">Habitantes</a></li>
         <li><a href="index.html#geografia">Geografía</a></li>
         <li><a href="index.html#personajes">Personajes</a></li>
-        <li><a href="index.html#ciudades">Fundacion</a></li>
+        <li><a href="index.html#ciudades">Fundación</a></li>
       </ul>
     </nav>
-  </header>
+</header>
+
 
   <!-- ===== FORMULARIO ===== -->
   <div class="form-container">
