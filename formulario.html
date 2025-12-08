@@ -21,6 +21,7 @@ nav ul {
   padding: 0;
 }
 
+
 nav ul li a {
   background-color: #f5c764;
   padding: 8px 14px;
@@ -28,14 +29,16 @@ nav ul li a {
   color: #000;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
+  display: inline-block; /* necesario para moverlos */
 }
 
-/* Hover como en la principal */
 nav ul li a:hover {
   background-color: #c39f47;
   color: #f5c764;
+  transform: translateY(-3px); /* SE LEVANTA */
 }
+
 
 /* Quitar el morado del visitado */
 nav ul li a:visited {
