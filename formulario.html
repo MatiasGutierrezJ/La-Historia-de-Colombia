@@ -131,8 +131,13 @@ nav ul li a:visited {
       <label>Correo:</label>
       <input type="email" placeholder="correo@ejemplo.com" required>
 
-      <label>Artículo que deseas:</label>
-      <input type="text" id="producto" readonly>
+<label>Artículo que deseas:</label>
+<select name="producto" id="producto" required>
+  <option value="">Selecciona un producto...</option>
+  <option value="Camiseta Selección Colombia">Camiseta Selección Colombia</option>
+  <option value="Café Colombiano">Café Colombiano</option>
+  <option value="Flores de Colombia">Flores de Colombia</option>
+</select>
 
       <label>Comentarios adicionales:</label>
       <textarea placeholder="Escribe algún detalle opcional..."></textarea>
