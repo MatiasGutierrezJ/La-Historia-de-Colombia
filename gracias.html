@@ -62,16 +62,5 @@
     <a href="index.html#productos">Seguir comprando</a>
   </div>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const articulo = params.get("item");
-
-    if (articulo) {
-      document.getElementById("titulo").textContent = "¡Gracias por tu compra!";
-      document.getElementById("detalle").textContent =
-        `Gracias por comprar ${articulo}. Tu pedido ha sido registrado correctamente.`;
-    }
-  </script>
-
 </body>
 </html>
